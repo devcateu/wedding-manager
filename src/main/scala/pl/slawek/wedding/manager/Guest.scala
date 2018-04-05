@@ -1,7 +1,6 @@
 package pl.slawek.wedding.manager
 
 import akka.actor.{Actor, ActorRef, Props}
-import pl.slawek.wedding.manager.Group.GroupIdentification
 import pl.slawek.wedding.manager.Guest.InvitationStatus.InvitationStatus
 import pl.slawek.wedding.manager.Guest._
 
@@ -27,8 +26,6 @@ object Guest {
   case class RetrieveInfo(receiver: ActorRef)
 
   case class ChangeName(guestName: GuestName)
-
-  case class AssignToGroup(groupIdentification: GroupIdentification)
 
   //
   case class GuestName(name: String, surname: String)
